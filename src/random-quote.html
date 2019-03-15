@@ -1,0 +1,27 @@
+<template>
+    <require from="./random-quote.css"></require>
+  
+    <require from="aurelia-kendoui-bridge/grid/grid"></require>
+    <require from="aurelia-kendoui-bridge/grid/col"></require>
+    <require from="aurelia-kendoui-bridge/common/template"></require>
+    <require from="aurelia-kendoui-bridge/grid/grid-command"></require>
+
+    <ak-grid k-data-source.bind="{data: message.data, pageSize: 5}" k-pageable.bind="pageable" k-sortable.bind="true">
+        <ak-col k-title="Foto" k-field="first_name">
+          <ak-template>
+            <div class='customer-photo' style="background-image: url(${avatar});"></div>
+            <div class='customer-name'></div>
+          </ak-template>
+        </ak-col>
+        <ak-col k-title="Nome" k-field="first_name"></ak-col>
+        <ak-col k-title="sobrenome" k-field="last_name"></ak-col>
+        <ak-col k-title="id" k-field="id"></ak-col>
+        <ak-col k-title="" k-field="id">
+           <ak-template>
+              <button class="btn btn-primary" type="button" click.delegate="DetalheUsuario(id)">Editar ${id}</button>
+              <button class="btn btn-danger" type="button" click.delegate="ExcluirUsuario(id)">Excluir ${id}</button>
+            </ak-template>
+        </ak-col>
+       
+      </ak-grid>
+    </template>

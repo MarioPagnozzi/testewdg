@@ -1,0 +1,76 @@
+<template> 
+
+  <div class="container">   
+        <section class="au-animate">
+                <div class="card border border-danger shadow p-3 mb-5 bg-white rounded">
+                  <div class="card-body">
+                     <div class="card-title"><h5>Pesquisa de Produtos</h5></div>
+                     <form role="form" submit.delegate="pesquisar()">
+                       <div class="form-group">                         
+                         <input type="text" id="cidade" class="form-control" value.bind="cidadeUF" placeholder="Cidade, UF" />
+                         <div class="row d-flex justify-content-center">
+                         <div class="col-md-4">
+                         <label for="azul">Azul</label>
+                         <div id="azul" class="switch__container">
+                            <input id="chk_azul" class="switch switch--shadow form-control" type="checkbox" checked.bind="azul"> 
+                            <label for="chk_azul"></label>                           
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                       <label for="vermelho">Vermelho</label>
+                         <div id="vermelho" class="switch__container">
+                            <input id="chk_vermelho" class="switch switch--shadow form-control" type="checkbox" checked.bind="vermelho"> 
+                            <label for="chk_vermelho"></label>                           
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="amarelo">Amarelo</label>
+                              <div id="amarelo" class="switch__container">
+                                 <input id="chk_amarelo" class="switch switch--shadow form-control" type="checkbox" checked.bind="amarelo"> 
+                                 <label for="chk_amarelo"></label>                           
+                               </div>
+                             </div>
+                        </div>
+                       </div>
+                     </form>
+                  </div>
+                </div>            
+        </section>
+        <hr />
+        <div class="jumbotron">
+          <div class="card shadow p-3 mb-5 bg-white rounded-4">
+            <div class="row">
+              <div class="col-md-3">
+                  <div class="card-img-left bg-light" style="max-width: 250px; height: 250px">
+                    <img src="images/Logo5.png" width="100%" height="100%" />
+                  </div>
+              </div>
+              <div class="col-md-8">
+                  <div class="card-body">
+                      <div class="card-title">
+                          <h3>Teste - WDG</h3>
+                        </div>
+                        <div class="card-text">
+                          Desenvolvimeno página Web - Aurélia
+                        </div>
+                  </div>
+                  <div class="card-footer">
+                      <div class="row">
+                         <div class="col-md-7">
+                           <span> Valor </span>
+                             <span style="font-size: 15pt; font-weight: bold"> R$ 0,00 </span>
+                         </div>
+                        <div class="col-md-2">
+                          <button class="btn btn-primary rounded"><span>Botão 1</span></button>
+                        </div>
+                      </div>
+                   </div>
+              </div>
+            </div>          
+           
+          </div>
+
+          
+           
+</template>
